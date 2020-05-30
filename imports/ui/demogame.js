@@ -3,6 +3,7 @@ import { Template } from 'meteor/templating';
 
 import { Rooms, Players } from '../api/collections.js';
 import { PRESIDENTIALPOWERS, FASCISTICONS } from './utils.js';
+import { TAPi18n } from 'meteor/tap:i18n';
 
 import './demogame.html';
 
@@ -122,9 +123,9 @@ Template.demogame.helpers({
   },
   peopleOrperson: function(num) {
     if (num > 1) {
-      return "people";
+      return TAPi18n.__("people");
     } else {
-      return "person";
+      return TAPi18n.__("person");
     }
   },
   partymembership: function(player) {

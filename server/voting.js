@@ -3,6 +3,7 @@ import { Random } from 'meteor/random';
 
 import Utils from './utils.js';
 import { Rooms, Players } from '../imports/api/collections.js';
+import { TAPi18n } from 'meteor/tap:i18n';
 
 Meteor.methods({
   "pickchancellor" ({ playerId }) {
@@ -66,7 +67,7 @@ Meteor.methods({
         if (room.fascist >= 3 && room.players[room.currentChancellor].role == "hitler") {
           update.state = "gameover";
           update.winner = "fascists";
-          update.reason = "hitler has been elected!";
+          update.reason = TAPi18n.__("Гитлер пришёл к власти!");
           update.players = room.players;
         } else {
           // shuffle discardpile into drawpile if drawpile is below 3

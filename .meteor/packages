@@ -29,3 +29,4 @@ deanius:promise
 mrt:cron-tick
 momentjs:moment
 okgrow:analytics
+tap:i18n

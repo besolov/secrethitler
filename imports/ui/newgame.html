@@ -1,19 +1,19 @@
 <template name="newgame">
-  <h1>Welcome to <span class="orange">Secret</span> Hitler</h1>
+  <h1>{{_ 'Welcome to'}} <span class="orange">{{_ 'Secret'}}</span> {{_ 'Hitler'}}</h1>
   <hr class="top-line">
   <form id="newgame-form">
     {{> flashMessages }}
     <p style="width:75%">
-      Remember your <span class="bold">password</span> for<br/>
-      re-entrance
+      {{_ 'Remember your'}} <span class="bold">{{_ 'password'}}</span> {{_ 'for'}}<br/>
+      {{_ 're-entrance'}}
     </p>
     <p>
-      <input type="text" name="name" autocomplete="off" placeholder="What's your name?">
-      <input type="text" name="codename" autocomplete="off" placeholder="Create a password">
+      <input type="text" name="name" autocomplete="off" placeholder="{{_ 'What\'s your name?'}}">
+      <input type="text" name="codename" autocomplete="off" placeholder="{{_ 'Create a password'}}">
     </p>
     <div>
-      <button type="submit">create game</button>
-      <button type="button" class="back-btn">back to menu</button>
+      <button type="submit">{{_ 'create game'}}</button>
+      <button type="button" class="back-btn">{{_ 'back to menu'}}</button>
     </div>
   </form>
 </template>

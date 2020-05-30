@@ -1,20 +1,20 @@
 <template name="joingame">
-  <h1>Welcome to <span class="orange">Secret</span> Hitler</h1>
+  <h1>{{_ 'Welcome to'}} <span class="orange">{{_ 'Secret'}}</span> {{_ 'Hitler'}}</h1>
   <hr class="top-line">
   <p style="width:75%">
-    Remember your <span class="bold">password</span> for<br/>
-    re-entrance</p>
+    {{_ 'Remember your'}} <span class="bold">{{_ 'password'}}</span> {{_ 'for'}}<br/>
+    {{_ 're-entrance'}}</p>
   <form id="joingame-form">
     {{> flashMessages }}
     <p>
-      <input type="text" autocomplete="off" name="accesscode" maxlength="6" placeholder="access code" /><br />
-      <input type="text" name="name" autocomplete="off" placeholder="what's your name?"/>
-      <input type="text" name="codename" autocomplete="off" placeholder="enter password"/>
+      <input type="text" autocomplete="off" name="accesscode" maxlength="6" placeholder="{{_ 'access code'}}" /><br />
+      <input type="text" name="name" autocomplete="off" placeholder="{{_ 'what\'s your name?'}}"/>
+      <input type="text" name="codename" autocomplete="off" placeholder="{{_ 'enter password'}}"/>
       <!-- <i class="fa fa-question-circle-o codename-icon" aria-hidden="true"></i> -->
     </p>
     <div>
-      <button type="submit">join game</button>
-      <button type="button" class="back-button">back to menu</button>
+      <button type="submit">{{_ 'join game'}}</button>
+      <button type="button" class="back-button">{{_ 'back to menu'}}</button>
     </div>
   </form>
 </template>

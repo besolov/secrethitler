@@ -1,8 +1,8 @@
 <template name="gameover">
-  <h2>game over!</h2>
+  <h2>{{_ 'game over!'}}</h2>
   <p>
     {{ room.reason }}<br />
-    <b>{{ room.winner }}</b> win
+    <b>{{ room.winner }}</b> {{_ 'win'}}
   </p>
   <ul class="playerlist">
     {{# each players }}
@@ -12,5 +12,5 @@
       </li>
     {{/ each }}
   </ul>
-  <button class="play-again-button">Play Again?</button>
+  <button class="play-again-button">{{_ 'Play Again?'}}</button>
 </template>

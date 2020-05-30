@@ -122,9 +122,9 @@ Template.game.helpers({
   },
   peopleOrperson: function(num) {
     if (num > 1) {
-      return "people";
+      return TAPi18n.__("people");
     } else {
-      return "person";
+      return TAPi18n.__("person");
     }
   },
   partymembership: function(player) {

@@ -1,18 +1,18 @@
 <template name="table">
-  <h1>Before we begin</h1>
+  <h1>{{_ 'Before we begin'}}</h1>
 
   <div class="hidden-role-container">
-    <div class="toggle-role">show/hide role</div>
+    <div class="toggle-role">{{_ 'show/hide role'}}</div>
     <div id="hidden-info" class="hidden-info">
-      <h2 class="hidden-role">you're <b>{{ role }}</b>!</h2>
+      <h2 class="hidden-role">{{_ 'you\'re'}} <b>{{ role }}</b>!</h2>
       <div class="breakdown-container">
-        <div>{{ rolecards.num }} players :</div>
-        <div>{{ rolecards.liberal }} liberal</div>
-        <div>{{ rolecards.fascist }} fascist + {{ rolecards.hitler }} Hitler</div>
+        <div>{{ rolecards.num }} {{_ 'players'}} :</div>
+        <div>{{ rolecards.liberal }} {{_ 'liberal'}}</div>
+        <div>{{ rolecards.fascist }} {{_ 'fascist'}} + {{ rolecards.hitler }} {{_ 'Hitler'}}</div>
       </div>
       {{# if teammates }}
       <p>
-        these are your fellow fascists:
+        {{_ 'these are your fellow fascists'}}:
         <ul class="playerlist">
           {{# each teammates }}
           <li class="{{# if equals playerId player._id }}current{{/ if }}">
@@ -28,9 +28,9 @@
     </div>
   </div>
 
-  <p>check your role and when you're ready to be seated press "seat me"</p>
+  <p>{{_ 'check your role and when you\'re ready to be seated press "seat me"'}}</p>
   <p>
-    <button id="ready-button" {{ isready }}>seat me</button>
+    <button id="ready-button" {{ isready }}>{{_ 'seat me'}}</button>
   </p>
 
   <ul class="circle-container-{{ players.length }}">

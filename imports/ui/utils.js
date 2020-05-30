@@ -1,40 +1,41 @@
 import { Rooms, Players } from '../api/collections.js';
+import { TAPi18n } from 'meteor/tap:i18n';
 
 export const PRESIDENTIALPOWERS = {
   1: {
     id: 1,
-    name: "Investigate Loyalty",
-    description: "President investigates a player's party membership.",
+    name: () => () => TAPi18n.__("Investigate Loyalty"),
+    description: () => () => TAPi18n.__("President investigates a player's party membership_"),
     icon: "fa fa-user-secret"
   },
   2: {
     id: 2,
-    name: "Policy Peek",
-    description: "President examines the top three cards. Policy order doesn't change.",
+    name: () => TAPi18n.__("Policy Peek"),
+    description: () => TAPi18n.__("President examines the top three cards_ Policy order doesn't change_"),
     icon: "fa fa-low-vision"
   },
   3: {
     id: 3,
-    name: "Call Special Election",
-    description: "President picks the next Presidential Candidate.",
+    name: () => TAPi18n.__("Call Special Election"),
+    description: () => TAPi18n.__("President picks the next Presidential Candidate_"),
     icon: "fa fa-street-view"
   },
   4: {
     id: 4,
-    name: "Execution",
-    description: "President must kill a player.",
+    name: () => TAPi18n.__("Execution"),
+    description: () => TAPi18n.__("President must kill a player_"),
     icon: "fa fa-bomb"
   },
   5: {
     id: 5,
-    name: "Final Execution",
-    description: "President must kill a player. Veto power is now unlocked.",
+    name: () => TAPi18n.__("Final Execution"),
+    description: () => TAPi18n.__("President must kill a player_ Veto power is now unlocked_"),
     icon: "fa fa-rocket"
   },
   6: {
     id: 6,
-    name: "Veto Power",
-    description: "When the fifth Fascist Policy is enacted, the Executive Branch gains the power to discard all three Policy tiles if both President and Chancellor agrees. Each use of Veto will advance the Election Tracker by one.",
+    name: () => TAPi18n.__("Veto Power"),
+    description: () => TAPi18n.__("When the fifth Fascist Policy is enacted, the Executive Branch gains the power to discard all three Policy tiles if both President and Chancellor agrees_ Each use of Veto will advance the Election Tracker by one_"),
     icon: "fa fa-gavel"
   },
 };
@@ -42,34 +43,34 @@ export const PRESIDENTIALPOWERS = {
 export const FASCISTICONS = {
   3: [
     { id: 1, title: "", class: "" },
-    { id: 2, title: "investigate loyalty", class: "fa fa-user-secret" },
-    { id: 3, title: "policy peek", class: "fa fa-low-vision" },
-    { id: 4, title: "execution", class: "fa fa-bomb" },
-    { id: 5, title: "final execution", class: "fa fa-rocket" },
+    { id: 2, title: () => TAPi18n.__("investigate loyalty"), class: "fa fa-user-secret" },
+    { id: 3, title: () => TAPi18n.__("policy peek"), class: "fa fa-low-vision" },
+    { id: 4, title: () => TAPi18n.__("execution"), class: "fa fa-bomb" },
+    { id: 5, title: () => TAPi18n.__("final execution"), class: "fa fa-rocket" },
     { id: 6, title: "", class: "" },
   ],
   5: [
     { id: 1, title: "", class: "" },
     { id: 2, title: "", class: "" },
-    { id: 3, title: "policy peek", class: "fa fa-low-vision" },
-    { id: 4, title: "execution", class: "fa fa-bomb" },
-    { id: 5, title: "final execution", class: "fa fa-rocket" },
+    { id: 3, title: () => TAPi18n.__("policy peek"), class: "fa fa-low-vision" },
+    { id: 4, title: () => TAPi18n.__("execution"), class: "fa fa-bomb" },
+    { id: 5, title: () => TAPi18n.__("final execution"), class: "fa fa-rocket" },
     { id: 6, title: "", class: "" },
   ],
   7: [
     { id: 1, title: "", class: "" },
-    { id: 2, title: "investigate loyalty", class: "fa fa-user-secret" },
-    { id: 3, title: "call special election", class: "fa fa-street-view" },
-    { id: 4, title: "execution", class: "fa fa-bomb" },
-    { id: 5, title: "final execution", class: "fa fa-rocket" },
+    { id: 2, title: () => TAPi18n.__("investigate loyalty"), class: "fa fa-user-secret" },
+    { id: 3, title: () => TAPi18n.__("call special election"), class: "fa fa-street-view" },
+    { id: 4, title: () => TAPi18n.__("execution"), class: "fa fa-bomb" },
+    { id: 5, title: () => TAPi18n.__("final execution"), class: "fa fa-rocket" },
     { id: 6, title: "", class: "" },
   ],
   9: [
-    { id: 1, title: "investigate loyalty", class: "fa fa-user-secret" },
-    { id: 2, title: "investigate loyalty", class: "fa fa-user-secret" },
-    { id: 3, title: "call special election", class: "fa fa-street-view" },
-    { id: 4, title: "execution", class: "fa fa-bomb" },
-    { id: 5, title: "final execution", class: "fa fa-rocket" },
+    { id: 1, title: () => TAPi18n.__("investigate loyalty"), class: "fa fa-user-secret" },
+    { id: 2, title: () => TAPi18n.__("investigate loyalty"), class: "fa fa-user-secret" },
+    { id: 3, title: () => TAPi18n.__("call special election"), class: "fa fa-street-view" },
+    { id: 4, title: () => TAPi18n.__("execution"), class: "fa fa-bomb" },
+    { id: 5, title: () => TAPi18n.__("final execution"), class: "fa fa-rocket" },
     { id: 6, title: "", class: "" },
   ],
 };
