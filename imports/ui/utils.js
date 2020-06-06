@@ -4,8 +4,8 @@ import { TAPi18n } from 'meteor/tap:i18n';
 export const PRESIDENTIALPOWERS = {
   1: {
     id: 1,
-    name: () => () => TAPi18n.__("Investigate Loyalty"),
-    description: () => () => TAPi18n.__("President investigates a player's party membership_"),
+    name: () => TAPi18n.__("Investigate Loyalty"),
+    description: () => TAPi18n.__("President investigates a player's party membership_"),
     icon: "fa fa-user-secret"
   },
   2: {
